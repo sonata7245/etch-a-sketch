@@ -23,6 +23,7 @@ body{
 
 #buttonArea{
     border: solid 1px rgb(212, 3, 3);
-    width: 400px;
+    width: 200px;
     height: 400px;
+    margin-right: 1em;
 }
