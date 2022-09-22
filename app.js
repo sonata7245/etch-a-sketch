@@ -14,7 +14,7 @@ function drawGrid(num) {
     }
     [document.querySelector('.grid')].forEach(item => {
         item.addEventListener('hover', event =>{
-            box.style.color = red;
+            item.style.background = red;
         })
     })
 }
