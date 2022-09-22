@@ -12,17 +12,18 @@ body{
 
 .row{
     display: flex;
+    flex: 1;
 }
 
 #gridContainer{
     display: flex;
     flex-direction: column;
-    width: 980px;
-    height: 980px;
+    width: 400px;
+    height: 400px;
 }
 
 #buttonArea{
     border: solid 1px rgb(212, 3, 3);
     width: 400px;
-    height: 980px;
+    height: 400px;
 }
