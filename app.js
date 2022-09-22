@@ -1,6 +1,6 @@
 
 const container = document.querySelector('#gridContainer')
-conatainer.addEventListener('hover', event => {
+container.addEventListener('hover', event => {
     box = event.target;
     box.style.background = 'red';
   })
