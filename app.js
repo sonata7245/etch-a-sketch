@@ -1,9 +1,9 @@
 
 const container = document.querySelector('#gridContainer')
-container.addEventListener('hover', event => {
+container.addEventListener('mouseover', event => {
     console.log(event.target)
-    // box = event.target;
-    // box.style.background = 'red';
+    box = event.target;
+    box.style.background = 'red';
   })
 
 function drawGrid(num) {
