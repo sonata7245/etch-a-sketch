@@ -1,5 +1,9 @@
 
 const container = document.querySelector('#gridContainer')
+conatainer.addEventListener('hover', event => {
+    box = event.target;
+    box.style.background = 'red';
+  })
 
 function drawGrid(num) {
     for (let i = 0; i <= num; i++) {
@@ -12,11 +16,11 @@ function drawGrid(num) {
         }
         container.append(row);
     }
-    [document.querySelector('.grid')].forEach(item => {
-        item.addEventListener('hover', event =>{
-            item.style.background = red;
-        })
-    })
+    // [document.querySelector('.grid')].forEach(item => {
+    //     item.addEventListener('hover', event =>{
+    //         item.style.background = red;
+    //     })
+    // })
 }
 
 drawGrid(10);
