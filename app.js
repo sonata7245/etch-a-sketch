@@ -33,13 +33,13 @@ function drawGrid(num) {
             box = document.createElement('div')
             box.classList.add('grid')
                 if (j == 1 && i == 1) {
-                    square.style.borderTopLeftRadius = "10px";
+                    box.style.borderTopLeftRadius = "10px";
                 } else if (j == num && i == 1) {
-                    square.style.borderTopRightRadius = "10px";
+                    box.style.borderTopRightRadius = "10px";
                 } else if (j == 1 && i == num) {
-                    square.style.borderBottomLeftRadius = "10px";
+                    box.style.borderBottomLeftRadius = "10px";
                 } else if (j == num && i == num) {
-                    square.style.borderBottomRightRadius = "10px";
+                    box.style.borderBottomRightRadius = "10px";
                 }
             row.append(box);
 
