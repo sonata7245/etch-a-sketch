@@ -56,6 +56,8 @@ body{
     background-color: white;
     width: 40px;
     border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 
 #colors{
@@ -64,7 +66,8 @@ body{
     align-items: center;
     background-color: white;
     border-radius: 50%;
-    width: 40px;
+    width: 100px;
+    height: 100px;
 
 }
 
