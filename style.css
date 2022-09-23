@@ -7,10 +7,10 @@ body{
     flex-direction: column;
 }
 
-a{
+/* a{
     text-decoration: none;
     color: white;
-}
+} */
 
 #frame{
     width: 600px;

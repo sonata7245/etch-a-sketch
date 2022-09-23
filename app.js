@@ -1,5 +1,3 @@
-
-
 const container = document.querySelector('#gridContainer')
 const resetButton = document.querySelector('#reset');
 const gridSizeSelector = document.querySelector('#gridSize');
