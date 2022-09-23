@@ -30,15 +30,15 @@ function drawGrid(num) {
         for (let j = 1; j <= num; j++) {
             box = document.createElement('div')
             box.classList.add('grid')
-                if (j == 1 && i == 1) {
-                    box.style.borderTopLeftRadius = "10px";
-                } else if (j == num && i == 1) {
-                    box.style.borderTopRightRadius = "10px";
-                } else if (j == 1 && i == num) {
-                    box.style.borderBottomLeftRadius = "10px";
-                } else if (j == num && i == num) {
-                    box.style.borderBottomRightRadius = "10px";
-                }
+            if (j == 1 && i == 1) {
+                box.style.borderTopLeftRadius = "10px";
+            } else if (j == num && i == 1) {
+                box.style.borderTopRightRadius = "10px";
+            } else if (j == 1 && i == num) {
+                box.style.borderBottomLeftRadius = "10px";
+            } else if (j == num && i == num) {
+                box.style.borderBottomRightRadius = "10px";
+            }
             row.append(box);
 
         }
@@ -68,8 +68,9 @@ container.addEventListener('mouseleave', event => {
 
 
 
-    container.addEventListener('mouseover', event => {
-        while (mouseDown == true) {
+container.addEventListener('mouseover', event => {
+    // while (mouseDown == true) {
+        console.log (event)
         box = event.target;
         if (activeRainbow) {
             box.style.background = getRainbow();
@@ -77,9 +78,9 @@ container.addEventListener('mouseleave', event => {
         else {
             box.style.background = cursorColor;
         }
-        
-    }
-    })
+
+    // }
+})
 
 resetButton.addEventListener('click', () => {
     cursorColor = '#000000';
