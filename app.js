@@ -71,7 +71,7 @@ container.addEventListener('mouseleave', event => {
 
 
     container.addEventListener('mouseover', event => {
-        if (mouseDown == true) {
+        while (mouseDown) {
         box = event.target;
         if (activeRainbow) {
             box.style.background = getRainbow();
