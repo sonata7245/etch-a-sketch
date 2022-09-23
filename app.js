@@ -9,6 +9,7 @@ const eraserButton = document.querySelector('#eraser');
 
 let cursorColor = '#000000';
 let activeRainbow = false;
+let mouseDown = false;
 
 drawGrid(16);
 
@@ -31,15 +32,15 @@ function drawGrid(num) {
         for (let j = 1; j <= num; j++) {
             box = document.createElement('div')
             box.classList.add('grid')
-            if (j == 1 && i == 1) {
-                square.style.borderTopLeftRadius = "10px";
-            } else if (j == num && i == 1) {
-                square.style.borderTopRightRadius = "10px";
-            } else if (j == 1 && i == num) {
-                square.style.borderBottomLeftRadius = "10px";
-            } else if (j == num && i == num) {
-                square.style.borderBottomRightRadius = "10px";
-            }
+                if (j == 1 && i == 1) {
+                    square.style.borderTopLeftRadius = "10px";
+                } else if (j == num && i == 1) {
+                    square.style.borderTopRightRadius = "10px";
+                } else if (j == 1 && i == num) {
+                    square.style.borderBottomLeftRadius = "10px";
+                } else if (j == num && i == num) {
+                    square.style.borderBottomRightRadius = "10px";
+                }
             row.append(box);
 
         }
@@ -56,7 +57,21 @@ function removeAllChildNodes(parent) {
 
 
 container.addEventListener('mousedown', event => {
+    mouseDown = true;
+})
+
+container.addEventListener('mouseup', event => {
+    mouseDown = false;
+})
+
+container.addEventListener('mouseexit', event => {
+    mouseDown = false;
+})
+
+
+
     container.addEventListener('mouseover', event => {
+        if (mouseDown == true) {
         box = event.target;
         if (activeRainbow) {
             box.style.background = getRainbow();
@@ -64,9 +79,9 @@ container.addEventListener('mousedown', event => {
         else {
             box.style.background = cursorColor;
         }
-
+        
+    }
     })
-})
 
 resetButton.addEventListener('click', () => {
     cursorColor = '#000000';
