@@ -104,7 +104,7 @@ colorPicker.addEventListener('change', function (e) {
 })
 eraserButton.addEventListener('click', (e) => {
     activeRainbow = false
-    cursorColor = '#FFFFFF';
+    cursorColor = 'rgb(190, 187, 187)';
 })
 
 
