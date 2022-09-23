@@ -85,7 +85,6 @@ container.addEventListener('mouseleave', event => {
 
 resetButton.addEventListener('click', () => {
     cursorColor = '#000000';
-    gridSizeSelector.value = 16;
     colorPicker.value = '#000000';
 })
 
