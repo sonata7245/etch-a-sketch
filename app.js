@@ -58,19 +58,19 @@ container.addEventListener('mousedown', event => {
     mouseDown = true;
 })
 
-container.addEventListener('mouseup', event => {
+window.addEventListener('mouseup', event => {
     mouseDown = false;
 })
 
-container.addEventListener('mouseleave', event => {
+window.addEventListener('mouseleave', event => {
     mouseDown = false;
 })
 
 
 
 container.addEventListener('mouseover', event => {
-    // while (mouseDown == true) {
-        console.log (event)
+    while (mouseDown == true) {
+        console.log(event)
         box = event.target;
         if (activeRainbow) {
             box.style.background = getRainbow();
@@ -79,7 +79,7 @@ container.addEventListener('mouseover', event => {
             box.style.background = cursorColor;
         }
 
-    // }
+    }
 })
 
 resetButton.addEventListener('click', () => {
