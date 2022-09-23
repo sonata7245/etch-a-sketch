@@ -53,23 +53,23 @@ function removeAllChildNodes(parent) {
     }
 }
 
+//This is causing a hang for some reason
+// container.addEventListener('mousedown', event => {
+//     mouseDown = true;
+// })
 
-container.addEventListener('mousedown', event => {
-    mouseDown = true;
-})
+// window.addEventListener('mouseup', event => {
+//     mouseDown = false;
+// })
 
-window.addEventListener('mouseup', event => {
-    mouseDown = false;
-})
-
-window.addEventListener('mouseleave', event => {
-    mouseDown = false;
-})
+// window.addEventListener('mouseleave', event => {
+//     mouseDown = false;
+// })
 
 
 
 container.addEventListener('mouseover', event => {
-    while (mouseDown == true) {
+    // while (mouseDown == true) {
         console.log(event)
         box = event.target;
         if (activeRainbow) {
@@ -79,7 +79,7 @@ container.addEventListener('mouseover', event => {
             box.style.background = cursorColor;
         }
 
-    }
+//    }
 })
 
 resetButton.addEventListener('click', () => {
