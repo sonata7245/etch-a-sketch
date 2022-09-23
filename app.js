@@ -14,9 +14,9 @@ drawGrid(16);
 
 function getRandomInt() {
     return Math.floor(Math.random() * 256);
-  }
+}
 
-function getRainbow (){
+function getRainbow() {
     let r = getRandomInt()
     let g = getRandomInt()
     let b = getRandomInt()
@@ -45,15 +45,17 @@ function removeAllChildNodes(parent) {
 }
 
 
+container.addEventListener('mousedown', event => {
+    container.addEventListener('mouseover', event => {
+        box = event.target;
+        if (activeRainbow) {
+            box.style.background = getRainbow();
+        }
+        else {
+            box.style.background = cursorColor;
+        }
 
-container.addEventListener('mouseover', event => {
-    box = event.target;
-    if (activeRainbow){
-    box.style.background = getRainbow();}
-    else {
-    box.style.background = cursorColor;
-    }
-
+    })
 })
 
 resetButton.addEventListener('click', () => {
@@ -66,19 +68,19 @@ resetButton.addEventListener('click', () => {
 gridSizeSelector.addEventListener('change', function (e) {
     let num = this.value
     drawGrid(num);
-} )
+})
 
 rainbowButton.addEventListener('click', (e) => {
     return activeRainbow = true
-} )
+})
 colorPicker.addEventListener('change', function (e) {
     activeRainbow = false
     cursorColor = (this.value);
-} )
+})
 eraserButton.addEventListener('click', (e) => {
     activeRainbow = false
     cursorColor = '#FFFFFF';
-} )
+})
 
 
 
