@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,24 @@
     <script src="app.js" defer></script>
     <title>Document</title>
 </head>
-<body>
-    <div id="buttonArea">
-        <button id="reset">Reset</button>
-        <div id="gridSelector">
-        <p><label for="gridSize">Grid size:</label></p>
-        <input type="range" id="gridSize" name="gridSize" min="10" max="50">
-        </div>
-        <div id="colors">
-        <input type="color" id="colorPicker">
-        <button id="rainbow">Rainbow</button>
-        <button id="eraser">Eraser</button>
-        </div>
 
-    </div>
-    <container id="gridContainer"></container>
+<body>
+    <conatiner id="frame">
+        <container id="gridContainer"></container>
+        <div id="buttonArea">
+            <button id="reset">Reset</button>
+            <div id="gridSelector">
+                <p><label for="gridSize">Grid size:</label></p>
+                <input type="range" id="gridSize" name="gridSize" min="10" max="50">
+            </div>
+            <div id="colors">
+                <input type="color" id="colorPicker">
+                <button id="rainbow">Rainbow</button>
+                <button id="eraser">Eraser</button>
+            </div>
+        </div>
+    </conatiner>
+
 </body>
+
 </html>
