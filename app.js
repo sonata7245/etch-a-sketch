@@ -69,7 +69,7 @@ container.addEventListener('mouseleave', event => {
 
 
     container.addEventListener('mouseover', event => {
-        while (mouseDown) {
+        while (mouseDown == true) {
         box = event.target;
         if (activeRainbow) {
             box.style.background = getRainbow();
@@ -83,6 +83,7 @@ container.addEventListener('mouseleave', event => {
 
 resetButton.addEventListener('click', () => {
     cursorColor = '#000000';
+    gridSizeSelector.value = 16;
     drawGrid(16);
     colorPicker.value = '#000000';
 })
