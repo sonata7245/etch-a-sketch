@@ -33,7 +33,8 @@ body{
     flex-direction: column;
     width: 600px;
     height: 600px;
-    background-color: white;
+    background-color: rgb(190, 187, 187);
+    border-radius: 10px;
 }
 
 #buttonArea{
