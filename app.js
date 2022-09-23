@@ -64,7 +64,7 @@ container.addEventListener('mouseup', event => {
     mouseDown = false;
 })
 
-container.addEventListener('mouseexit', event => {
+container.addEventListener('mouseleave', event => {
     mouseDown = false;
 })
 
