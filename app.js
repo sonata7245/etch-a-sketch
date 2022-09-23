@@ -46,7 +46,7 @@ function removeAllChildNodes(parent) {
 
 
 
-container.addEventListener('mouseover', event => {
+container.addEventListener('mouseover' && 'mouseDown', event => {
     box = event.target;
     if (activeRainbow){
     box.style.background = getRainbow();}
